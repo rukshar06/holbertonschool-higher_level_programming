@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import sys
+
 if __name__ == "__main__":
     args = sys.argv[1:]
     count = len(args)
@@ -8,13 +9,13 @@ if __name__ == "__main__":
         label = "argument"
     else:
         label = "arguments"
+
     if count == 0:
         punctuation = "."
     else:
         punctuation = ":"
-        print(str(count) + " " + label + punctuation)
 
-        position = 1
-        for arg in args:
-            print(str(position) + ": " + arg)
-            position = position + 1
+    print("{} {}{}".format(count, label, punctuation))
+
+    for i, arg in enumerate(args, 1):
+        print("{}: {}".format(i, arg))
