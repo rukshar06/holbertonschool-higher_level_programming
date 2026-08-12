@@ -16,5 +16,5 @@ if __name__ == "__main__":
 
         position = 1
         for arg in args:
-            print(str(position) + ":" + arg)
+            print(str(position) + ": " + arg)
             position = position + 1
