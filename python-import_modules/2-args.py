@@ -17,5 +17,5 @@ if __name__ == "__main__":
 
     print("{} {}{}".format(count, label, punctuation))
 
-    for i, arg in enumerate(args, 1):
-        print("{}: {}".format(i, arg))
+    for i in range(count):
+        print("{}: {}".format(i + 1, args[i]))
