@@ -24,7 +24,7 @@ def roman_to_int(roman_string):
             # if yes; subtract
             total -= current
         else:
-    # add
+            # add
             total += current
 
         previous = current
