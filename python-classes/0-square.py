@@ -6,4 +6,5 @@
 class Square:
     """This function defines a square"""
 
+
 pass
