@@ -18,7 +18,7 @@ class shape(ABC):
         pass
 
 
-class circle(shape):
+class Circle(shape):
     """concrete class representing a circle, inheriting from shape."""
 
     def __init__(self, radius):
@@ -31,7 +31,7 @@ class circle(shape):
         return 2 * math.pi * self.radius
 
 
-class Rectangle(Shape):
+class Rectangle(shape):
     """Concrete class representing a rectangle, inheriting from Shape."""
 
     def __init__(self, width, height):
