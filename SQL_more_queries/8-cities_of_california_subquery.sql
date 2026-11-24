@@ -3,7 +3,7 @@ SELECT
     id,
     name
 FROM
-    cities.id
+    cities
 WHERE
     state_id IN (
         SELECT
