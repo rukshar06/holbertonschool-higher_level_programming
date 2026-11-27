@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""Display states matching the user input safely"""
+"""Script that displays states matching the argument"""
 
 import MySQLdb
 from sys import argv
+
 
 if __name__ == '__main__':
     db = MySQLdb.connect(
@@ -15,13 +16,15 @@ if __name__ == '__main__':
 
     cursor = db.cursor()
 
-    query = "SELECT * " \
-            "FROM states " \
-            "WHERE name = %s ORDER BY id ASC"
+    query = "SELECT * FROM states " \
+            "WHERE BINARY name = BINARY '{}' " \
+            "ORDER BY id ASC".format(argv[4])
 
-    cursor.execute(query, (argv[4],))
+    cursor.execute(query)
 
-    for row in cursor.fetchall():
+    rows = cursor.fetchall()
+
+    for row in rows:
         print(row)
 
     cursor.close()
